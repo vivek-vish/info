@@ -1,0 +1,129 @@
+<!-- Updated student.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Entry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #007BFF, #00C6FF);
+            font-family: Arial, sans-serif;
+            padding: 40px 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 40px 0;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .form-group input {
+            width: 48%;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            text-align: left;
+        }
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td input {
+            width: 95%;
+            padding: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Marks Entry</h2>
+        <form action="/submit" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="branch">Branch:</label>
+            <input type="text" name="branch" id="branch" required>
+
+            <label for="semester">Semester:</label>
+            <input type="text" name="semester" id="semester" required>
+
+            <label for="subject1">Subject 1:</label>
+            <input type="text" name="subject1" required>
+            <input type="number" name="marks1" required placeholder="Marks">
+
+            <label for="subject2">Subject 2:</label>
+            <input type="text" name="subject2" required>
+            <input type="number" name="marks2" required placeholder="Marks">
+
+            <label for="subject3">Subject 3:</label>
+            <input type="text" name="subject3" required>
+            <input type="number" name="marks3" required placeholder="Marks">
+
+            <label for="subject4">Subject 4:</label>
+            <input type="text" name="subject4" required>
+            <input type="number" name="marks4" required placeholder="Marks">
+
+            <label for="subject5">Subject 5:</label>
+            <input type="text" name="subject5" required>
+            <input type="number" name="marks5" required placeholder="Marks">
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <a href="/teacher_login">Teacher Login</a>
+
+        </form>
+    </div>
+</body>
+</html>

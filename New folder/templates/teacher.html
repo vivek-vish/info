@@ -1,0 +1,54 @@
+<!-- teacher.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Student Marks</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Branch</th>
+            <th>Semester</th>
+            <th>Subject 1</th>
+            <th>Marks 1</th>
+            <th>Subject 2</th>
+            <th>Marks 2</th>
+            <th>Subject 3</th>
+            <th>Marks 3</th>
+            <th>Subject 4</th>
+            <th>Marks 4</th>
+            <th>Subject 5</th>
+            <th>Marks 5</th>
+            <!-- <th>Total Marks</th> -->
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+            <td>{{ row[8] }}</td>
+            <td>{{ row[9] }}</td>
+            <td>{{ row[10] }}</td>
+            <td>{{ row[11] }}</td>
+            <td>{{ row[12] }}</td>
+            <td>{{ row[13] }}</td>
+            <!-- <td>{{ row[14] }}</td> -->
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Student Page</a>
+    <a href="/logout">Logout</a>
+
+</body>
+</html>
